@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.jpg">
+    <title>Tam Vu Confessions Generator</title>
+  </head>
+  <body>
+    <div id="main">
+      <div class="flex">
+        <div class="flex">
+          <label for="last_cfs" style="margin-right: 0.5em;">Số cfs gần nhất <a href="https://www.facebook.com/svhdtamvucfs/" target="_blank">(SVHD Tầm Vu Confessions)</a></label>
+          <input type="number" name="last_cfs" id="last_cfs" placeholder="VD: 2222">
+        </div>
+        <div class="flex">
+          <label for="raw_data">Dữ liệu cfs (copy trực tiếp từ <a id="gsheet" href="https://docs.google.com/spreadsheets/d/1AveJ0O9-54O3-VWZM_y12GTGpdj0IM465cInyDltImw/edit#gid=1174669498" target="_blank">GSheet</a>)</label>
+          <textarea type="text" name="raw_data" id="raw_data" rows="30"></textarea>
+        </div>
+        <div class="flex">
+          <label for="post">Bình luận thêm (nếu có)</label>
+          <textarea type="text" name="post" id="post" rows="4"></textarea>
+        </div>
+      </div>
+      <div id="res_container">
+        <p for="result">Kết quả</p>
+        <div name="result" id="result" role="textbox" class="border-black"></div>
+        <button id="copy" style="margin-bottom: 1em;" class="btn">Copy</button>
+        <a class="btn" target="_blank" href="https://business.facebook.com/latest/composer?asset_id=548025412280277&ref=biz_web_home&context_ref=HOME" id="up-btn" style="background-color: rgb(33, 31, 31); border: none;">Upload</a>
+      </div>
+    </div> 
+    <script src="/src/index.ts" type="module"></script>
+  </body>
+</html>
